@@ -20,7 +20,7 @@ public class HudRenderer {
 
     private static final int BAR_Y = 42;
 
-    private static final int BAR_WIDTH =
+    static final int BAR_WIDTH =
             HUD_WIDTH - COVER_SIZE - PADDING * 3;
 
     private static final int BAR_HEIGHT = 2;
@@ -76,26 +76,40 @@ public class HudRenderer {
             Song song
     ) {
 
-        // increases a little bit the size
+        // increases the font size a little bit
         context.pose().pushMatrix();
         context.pose().scale(TITLE_SCALE, TITLE_SCALE);
+        int scaledWidth = (int) (BAR_WIDTH / TITLE_SCALE);
 
         // track
         context.text(
                 minecraft.font,
-                Component.literal(song.getTrack()),
+                Component.literal(
+                        MarqueeText.fitText(
+                                minecraft,
+                                song.getTrack(),
+                                scaledWidth
+                        )
+                ),
                 (int) (TEXT_X / TITLE_SCALE),
                 (int) (10 / TITLE_SCALE),
                 TEXT_COLOR,
                 false
         );
 
+        // back to normal size
         context.pose().popMatrix();
 
         // title
         context.text(
                 minecraft.font,
-                Component.literal("by " + song.getArtist()),
+                Component.literal(
+                        MarqueeText.fitText(
+                                minecraft,
+                                "by " + song.getArtist(),
+                                BAR_WIDTH
+                        )
+                ),
                 TEXT_X,
                 24,
                 SECONDARY_TEXT_COLOR,

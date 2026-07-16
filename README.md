@@ -1,17 +1,13 @@
 # HON MPRIS
 
-A lightweight Minecraft Fabric mod that integrates MPRIS media players with Minecraft, displaying currently playing music information directly in-game.
+A lightweight Minecraft Fabric mod that works with MPRIS media players to display 
+the currently playing music information directly in-game. Highly based on Spotify Overlay.
+
 
 ## Features
 
-- Displays current song title
-- Displays artist information
-- Displays album information
-- Shows playback progress
-- Supports any MPRIS-compatible media player
-- Customizable HUD position and appearance
-- Lightweight and client-side only
-
+- Displays current song title, artist, album cover and playback progress
+- Supports any MPRIS-compatible media player (except firefox because I'm lazy to implement a blacklist for now)
 
 ## Development
 

@@ -3,16 +3,15 @@
 	"id": "honmpris",
 	"version": "${version}",
 	"name": "HonMPRIS",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "a minecraft mpris music hud mod",
 	"authors": [
-		"Me!"
+		"soller"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/honsoller/mpris-overlay"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/honmpris/icon.png",
+	"icon": "assets/honmpris/textures/boymoder.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
