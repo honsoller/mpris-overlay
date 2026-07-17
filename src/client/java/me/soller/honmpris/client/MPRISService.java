@@ -78,7 +78,7 @@ public class MPRISService {
         if (player == null) {
 
             currentSong = new Song(
-                    null,
+                    "textures/boymoder.png",
                     "nenhuma musica tocando..",
                     "",
                     0,

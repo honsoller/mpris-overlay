@@ -12,6 +12,8 @@ public class HonMPRISClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 
+		Config.load();
+
 		HudElementRegistry.attachElementBefore(
 				VanillaHudElements.CHAT,
 				HonMPRIS.id("player"),

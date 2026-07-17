@@ -10,7 +10,6 @@ public class MarqueeText {
             int maxWidth
     ) {
 
-        // Se já cabe, devolve o texto original
         if (minecraft.font.width(text) <= maxWidth) {
             return text;
         }
@@ -22,7 +21,6 @@ public class MarqueeText {
 
         while (i < text.length()) {
 
-            // Será que cabe adicionar a próxima letra?
             String next = result + text.charAt(i) + dots;
 
             if (minecraft.font.width(next) > maxWidth) {

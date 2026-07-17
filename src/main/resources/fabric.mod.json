@@ -3,7 +3,7 @@
 	"id": "honmpris",
 	"version": "${version}",
 	"name": "HonMPRIS",
-	"description": "a minecraft mpris music hud mod",
+	"description": "a HON minecraft music hud mod",
 	"authors": [
 		"soller"
 	],
@@ -19,6 +19,9 @@
 		],
 		"client": [
 			"me.soller.honmpris.client.HonMPRISClient"
+		],
+		"modmenu": [
+			"me.soller.honmpris.client.HonMPRISModMenu"
 		]
 	},
 	"mixins": [

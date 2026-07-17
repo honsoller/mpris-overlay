@@ -37,14 +37,6 @@ public class Song {
         return artist;
     }
 
-    public int getPositionSeconds() {
-        return positionSeconds;
-    }
-
-    public long getDurationSeconds() {
-        return durationSeconds;
-    }
-
     public float getProgressBarRatio() {
         return progressBarRatio;
     }

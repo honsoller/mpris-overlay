@@ -139,7 +139,7 @@ public class HudRenderer {
                 BAR_Y,
                 TEXT_X + progressWidth,
                 BAR_Y + BAR_HEIGHT,
-                Config.ACCENT_COLOR
+                Config.get().accentColor
         );
     }
 
@@ -181,6 +181,10 @@ public class HudRenderer {
             Song song
     ) {
 
+        if (!Config.get().renderOverlay) {
+            return;
+        }
+
         String coverPath = song.getCoverPath();
 
         if (coverPath != null && !coverPath.equals(currentCoverPath)) {
@@ -196,13 +200,13 @@ public class HudRenderer {
         context.pose().pushMatrix();
 
         context.pose().translate(
-                Config.HUD_X,
-                Config.HUD_Y
+                Config.get().hudX,
+                Config.get().hudY
         );
 
         context.pose().scale(
-                Config.HUD_SCALE,
-                Config.HUD_SCALE
+                Config.get().hudScale,
+                Config.get().hudScale
         );
 
         drawBackground(context);
