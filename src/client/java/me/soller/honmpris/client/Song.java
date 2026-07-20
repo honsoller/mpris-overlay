@@ -50,8 +50,13 @@ public class Song {
     }
 
     private static String formatTime(long seconds) {
-        long minutes = seconds / 60;
+        long hours = seconds / 3600;
+        long minutes = (seconds % 3600) / 60;
         long secs = seconds % 60;
+
+        if (hours > 0) {
+            return String.format("%d:%02d:%02d", hours, minutes, secs);
+        }
 
         return String.format("%d:%02d", minutes, secs);
     }
